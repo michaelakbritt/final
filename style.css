@@ -1,0 +1,139 @@
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #f8f8f7; /* Light background similar to Apple's */
+    color: #333; /* Dark text for readability */
+    line-height: 2; /* Increase line-height for better text spacing */
+    padding: 0 20px; /* Padding to prevent elements from touching the edges */
+}
+
+/* Navigation Bar Styles */
+header {
+  width: 100%; /* Full width for header */
+  background-color: #007aff; /* Blue background for the nav bar */
+  padding: 15px 0; /* Vertical padding for spacing */
+  position: fixed; /* Fix the nav bar at the top */
+  top: 0; /* Align at the very top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+nav {
+  display: flex; /* Flex layout for horizontal nav items */
+  justify-content: center; /* Center nav items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+ul {
+  display: flex; /* Flexbox for horizontal alignment of links */
+  list-style: none; /* Remove default list bullets */
+}
+
+ul li {
+  margin: 0 20px; /* Spacing between nav links */
+}
+
+ul li a {
+  text-decoration: none; /* Remove underlines */
+  color: white; /* White text color */
+  font-size: 18px; /* Font size for nav links */
+  font-weight: bold; /* Bold links */
+  padding: 8px 20px; /* Padding around the links */
+  display: inline-block; /* Make the link fill the entire li */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+ul li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white; /* Ensure text stays white */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Header Section with Image for About Page */
+.about-header {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Set height for the header section */
+  overflow: hidden; /* Hide any overflow from the image */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the content vertically */
+  margin-top: 70px; /* Push content down to avoid nav bar overlap */
+}
+
+.about-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire header */
+  filter: brightness(50%); /* Darken the image a bit to make the text more readable */
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: white; /* White text color */
+}
+
+.headline {
+  font-size: 48px;
+  font-weight: 700; /* Bold font for the title */
+}
+
+/* About Section Styles */
+.outer {
+  padding: 20px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about {
+  font-size: 18px;
+  line-height: 2.2; /* Further increase line-height for better spacing */
+  color: #333;
+  text-align: center;
+  margin-top: 80px; /* Ensure space below the header */
+  padding: 40px 20px; /* More padding for better spacing */
+  background-color: #fff; /* White background for the about text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the text box */
+  border-radius: 8px; /* Rounded corners for the text box */
+  margin-bottom: 60px; /* Increase space below the about box */
+  width: 100%; /* Ensure full width */
+}
+
+.about p {
+  margin-bottom: 20px; /* Increase space between paragraphs */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-header {
+    height: 300px; /* Make the header shorter on smaller screens */
+  }
+
+  .header-text .headline {
+    font-size: 36px; /* Adjust font size for headline */
+  }
+
+  .about {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin-top: 40px; /* Reduce space on top for smaller screens */
+  }
+
+  .about p {
+    margin-bottom: 15px; /* Reduce space between paragraphs for smaller screens */
+  }
+}
